@@ -4,13 +4,39 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 from colorama import init, Fore, Back, Style
-
+from flask import Flask
+import threading
+import time
+        
 # Khởi tạo colorama
 init(autoreset=True)
 
 # Load Dotenv
 load_dotenv()
+keep_alive()
 
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "[Info] Selfbot is running!"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
+
+def keep_alive():
+    """Chạy Flask server trong thread riêng"""
+    server = threading.Thread(target=run)
+    server.daemon = True
+    server.start()
+    print(f"{Fore.GREEN}[Info]{Style.RESETALL} Keep-alive server started!")
+
+if __name__ == "__main__":
+    keep_alive()
+    # Giữ chương trình chạy
+    while True:
+        time.sleep(60)
+        
 # Cấu hình
 USER_ID_TO_REPORT = 1130115056395362404  # User ID để gửi báo cáo
 BANNED_WORDS = [
