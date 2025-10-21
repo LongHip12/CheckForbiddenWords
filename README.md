@@ -1,4 +1,4 @@
-# 🤖 Discord Farm Level Selfbot
+# 🤖 Discord Manager Selfbot
 
 This is a self bot that helps you manage the server, manage banned words in the server
 
