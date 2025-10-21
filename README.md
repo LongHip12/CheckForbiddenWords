@@ -13,4 +13,4 @@ This is a self bot that helps you manage the server, manage banned words in the 
 *Run `generate_token.py` in [here](https://github.com/LongHip12/DiscordAutoLevel/blob/main/generate_token.py) and enter account/password and tools will get token for you!*
 
 ### Install Requirements Package
-*Use `pip install discord.py-self colorama` to use the code!*
+*Use `pip install discord.py-self colorama flask` to use the code!*
